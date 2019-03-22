@@ -1,0 +1,6 @@
+function commits_since() {
+  echo `git cherry $1 | wc -l`
+}
+
+num_commits=`commits_since $1`
+git rebase -i HEAD~$num_commits
