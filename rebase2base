@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 function commits_since() {
   echo `git cherry $1 | wc -l`;
